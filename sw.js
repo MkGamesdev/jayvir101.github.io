@@ -33,12 +33,12 @@ self.addEventListener('install',function(event) {
         caches.open(CACHE_NAME)
         .then(function(cache) {
             return cache.addAll(REQUIRED_FILES);
-        }).then(() => self.skipWaiting());
+        }).then(() => self.skipWaiting())
     );
 });
 
 self.addEventListener('activate',event => {
-    event.waitUntil(self.clients.claim());
+    event.waitUntil(self.clients.claim())
 });
 
 self.addEventListener('fetch',function(event) {
