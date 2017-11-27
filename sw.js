@@ -39,8 +39,13 @@ self.addEventListener('install', function(event) {
 
 self.addEventListener('fetch', function(event) {
     if (event.request.method != 'GET') return;
+    (function() {
+        link = new URL(event.request.url);
+        link.search = "";
+        event.request.url = link.href.endsWith("index.html") ?  (link.href + "index.html") : link.href;
+    })();
     event.respondWith(
-        caches.match(event.request,{ignoreSearch:true})
+        caches.match(,{ignoreSearch:true})
         .then(function(response) {
             if (response) {
                 return response;
