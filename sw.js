@@ -25,7 +25,7 @@ self.addEventListener('install', function(event) {
             else {
                 REQUIRED_FILES.push(item.Icon);
             }
-        });
+        })
         caches.open(CACHE_NAME)
         .then(function(cache) {
             return cache.addAll(REQUIRED_FILES);
