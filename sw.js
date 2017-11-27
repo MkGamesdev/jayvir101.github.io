@@ -34,12 +34,12 @@ self.addEventListener('install', function(event) {
 });
 
 self.addEventListener('fetch', function(event) {
+    (function() {
+        link = new URL(event.request.url);
+        link.search = "";
+        link.pathname = link.pathname.endsWith("index.html") ? link.pathname.replace("index.html") : link.pathname;
+    })();
     event.respondWith(
-        (function() {
-            link = new URL(event.request.url);
-            link.search = "";
-            link.pathname = link.pathname.endsWith("index.html") ? link.pathname.replace("index.html") : link.pathname;
-        })(),
         caches.match(link.href)
         .then(function(response) {
             if (response) {
