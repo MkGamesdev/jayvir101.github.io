@@ -3,6 +3,7 @@ var CACHE_NAME = 'cache-v1';
 
 var REQUIRED_FILES = [
     "https://jayvir101.github.io/lightning/",
+    "https://jayvir101.github.io/lightning/index.html",
     "https://jayvir101.github.io/lightning/web_light.js",
     "https://jayvir101.github.io/lightning/server.js",
     "https://jayvir101.github.io/lightning/index.css",
@@ -10,10 +11,13 @@ var REQUIRED_FILES = [
     "https://jayvir101.github.io/lightning/index.js",
     "https://jayvir101.github.io/lightning/Settings.js",
     "https://jayvir101.github.io/lightning/Settings/",
+    "https://jayvir101.github.io/lightning/Settings/index.html",
     "https://jayvir101.github.io/lightning/Settings/index.js",
     "https://jayvir101.github.io/lightning/Games/index.js",
     "https://jayvir101.github.io/lightning/Games/",
+    "https://jayvir101.github.io/lightning/Games/index.html",
     "https://jayvir101.github.io/lightning-resources/wallpaper.png",
+    "https://jayvir101.github.io/lightning-resources/offline.html",
 ];
 
 self.addEventListener('install', function(event) {
@@ -34,13 +38,9 @@ self.addEventListener('install', function(event) {
 });
 
 self.addEventListener('fetch', function(event) {
-    (function() {
-        link = new URL(event.request.url);
-        link.search = "";
-        link.pathname = link.pathname.endsWith("index.html") ? link.pathname.replace("index.html") : link.pathname;
-    })();
+    if (event.request.method != 'GET') return;
     event.respondWith(
-        caches.match(link.href)
+        caches.match(event.request,{ignoreSearch:true})
         .then(function(response) {
             if (response) {
                 return response;
