@@ -36,8 +36,7 @@ self.addEventListener('install', function(event) {
 self.addEventListener('fetch', function(event) {
     event.respondWith(
         (function() {
-            console.log(event.request);
-            link = new URL(event.request);
+            link = new URL(event.request.url);
             link.search = "";
             link = link.endsWith("index.html") ? link.replace("index.html") : link;
         })(),
