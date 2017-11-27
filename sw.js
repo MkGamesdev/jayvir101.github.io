@@ -35,9 +35,11 @@ self.addEventListener('install', function(event) {
 
 self.addEventListener('fetch', function(event) {
     event.respondWith(
-        link = new URL(event.request);
-        link.search = "";
-        link = link.endsWith("index.html") ? link.replace("index.html") : link;
+        (function() {
+            link = new URL(event.request);
+            link.search = "";
+            link = link.endsWith("index.html") ? link.replace("index.html") : link;
+        })(),
         caches.match(link.href)
         .then(function(response) {
             if (response) {
