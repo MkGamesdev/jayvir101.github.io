@@ -45,7 +45,7 @@ self.addEventListener('fetch', function(event) {
         event.request.url = link.href.endsWith("index.html") ?  (link.href + "index.html") : link.href;
     })();
     event.respondWith(
-        caches.match(,{ignoreSearch:true})
+        caches.match(event.request)
         .then(function(response) {
             if (response) {
                 return response;
