@@ -48,7 +48,7 @@ self.addEventListener('fetch', function(event) {
             console.log(event);
             return fetch(event.request);
         }).catch(function(test) {
-            console.log(test);
+            return caches.match("https://jayvir101.github.io/lightning-resources/wallpaper.png");
         })
     );
 });
