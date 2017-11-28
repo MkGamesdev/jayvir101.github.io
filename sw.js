@@ -38,16 +38,18 @@ self.addEventListener('install', event => {
 });
 
 self.addEventListener('activate',event => {
-    event.waitUntil(self.clients.claim())
+    event.waitUntil(self.clients.claim());
 });
 
 self.addEventListener('fetch', event => {
     if (event.request.method != 'GET') return;
     event.respondWith((async function() {
-            const cachedResponse = await caches.match(event.request,{ignoreSearch:true});
-            if(cachedResponse) {
-               return cachedResponse;
+            const response = await caches.match(event.request,{ignoreSearch:true});
+            if(response) {
+                console.log(response);
+               return response;
             }
+        console.log((function() {return fetch(event.request)})());
             return fetch(event.request);
     })());
 });
