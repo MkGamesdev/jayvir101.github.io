@@ -50,12 +50,14 @@ self.addEventListener('fetch', event => {
             console.log(response);
             return response;
         }
-        response = await fetch(event.request);
+        fetch(event.request).then(function(r) {
+            response = r
+        });
         if(response) {
             console.log(response);
             return response;
         }
-        response = await fetch("offline.html");
+        response = await fetch("https://jayvir101.github.io/lightning-resources/offline.html");
         return response;
     })());
 });
