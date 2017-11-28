@@ -44,12 +44,17 @@ self.addEventListener('activate',event => {
 self.addEventListener('fetch', event => {
     if (event.request.method != 'GET') return;
     event.respondWith((async function() {
-            const response = await caches.match(event.request,{ignoreSearch:true});
-            if(response) {
-                console.log(response);
-               return response;
-            }
-        console.log((function() {return fetch(event.request)})());
-            return fetch(event.request);
+        const response = await caches.match(event.request,{ignoreSearch:true});
+        if(response) {
+            console.log(response);
+            return response;
+        }
+        response = await fetch(event.request);
+        if(response) {
+            console.log(response);
+            return response;
+        }
+        response = await fetch("offline.html");
+        return response;
     })());
 });
