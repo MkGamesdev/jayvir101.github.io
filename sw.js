@@ -41,23 +41,17 @@ self.addEventListener('activate',event => {
     event.waitUntil(self.clients.claim())
 });
 
-self.addEventListener('fetch',function(event) {
+self.addEventListener('fetch', event => {
     if (event.request.method != 'GET') return;
     /*(function() {
         link = new URL(event.request.url);
         link.search = "";
         event.request.url = link.href.endsWith("index.html") ?  (link.href + "index.html") : link.href;
     })();*/
-    event.respondWith(
-        caches.match(event.request,{ignoreSearch:true})
-        .then(function(response) {
-            if (response) {
-                return response;
-            }
-            console.log(event);
-            return fetch(event.request);
-        }).catch(function(test) {
-            return caches.match("https://jayvir101.github.io/lightning-resources/wallpaper.png");
-        })
-    );
+    event.respondWith(async function() {
+        console.log(event.request);
+        const cachedResponse = await caches.match(event.request,{ignoreSearch:true});
+        if (cachedResponse) return cachedResponse;
+        return fetch(event.request);
+    }());
 });
