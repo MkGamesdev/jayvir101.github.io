@@ -50,7 +50,7 @@ self.addEventListener('fetch', event => {
             console.log(response);
             return response;
         }
-        fetch(event.request).then(function(r) {
+        await fetch(event.request).then(function(r) {
             response = r
         });
         if(response) {
