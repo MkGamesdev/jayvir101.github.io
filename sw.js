@@ -48,8 +48,8 @@ self.addEventListener('fetch', event => {
             console.log(event.request);
             const cachedResponse = await caches.match(event.request,{ignoreSearch:true});
             return cachedResponse;
-        }
-        catch() {
+        } catch(err) {
+            console.log(err);
             fetch(event.request).catch(function(e) {console.log(e)});
         }
     })());
