@@ -43,15 +43,14 @@ self.addEventListener('activate',event => {
 
 self.addEventListener('fetch', event => {
     if (event.request.method != 'GET') return;
-    /*(function() {
-        link = new URL(event.request.url);
-        link.search = "";
-        event.request.url = link.href.endsWith("index.html") ?  (link.href + "index.html") : link.href;
-    })();*/
     event.respondWith((async function() {
-        console.log(event.request);
-        const cachedResponse = await caches.match(event.request,{ignoreSearch:true});
-        if (cachedResponse) return cachedResponse;
-        return fetch(event.request);
+        try {
+            console.log(event.request);
+            const cachedResponse = await caches.match(event.request,{ignoreSearch:true});
+            return cachedResponse;
+        }
+        catch() {
+            fetch(event.request).catch(function(e) {console.log(e)});
+        }
     })());
 });
