@@ -20,8 +20,8 @@ var REQUIRED_FILES = [
     "https://jayvir101.github.io/lightning-resources/offline.html",
 ];
 
-self.addEventListener('install',function(event) {
-    event.waitUntil(
+self.addEventListener('install', event => {
+    event.waitUntil((function() {
         Games.forEach(function(item,index) {
             if(item.Iframe) {
                 REQUIRED_FILES.push(item.Link);
@@ -34,7 +34,7 @@ self.addEventListener('install',function(event) {
         .then(function(cache) {
             return cache.addAll(REQUIRED_FILES);
         }).then(() => self.skipWaiting())
-    );
+    })());
 });
 
 self.addEventListener('activate',event => {
@@ -48,10 +48,10 @@ self.addEventListener('fetch', event => {
         link.search = "";
         event.request.url = link.href.endsWith("index.html") ?  (link.href + "index.html") : link.href;
     })();*/
-    event.respondWith(async function() {
+    event.respondWith((async function() {
         console.log(event.request);
         const cachedResponse = await caches.match(event.request,{ignoreSearch:true});
         if (cachedResponse) return cachedResponse;
         return fetch(event.request);
-    }());
+    })());
 });
