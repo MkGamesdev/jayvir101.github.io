@@ -47,7 +47,6 @@ self.addEventListener('fetch', event => {
     event.respondWith((async function() {
         var response = await caches.match(event.request,{ignoreSearch:true});
         if(response) {
-            console.log(response);
             return response;
         }
         else if(navigator.onLine) {
@@ -56,5 +55,5 @@ self.addEventListener('fetch', event => {
         else {
             return await fetch("https://jayvir101.github.io/lightning-resources/offline.html");
         }
-    })());
+    }));
 });
