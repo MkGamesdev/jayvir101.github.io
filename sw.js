@@ -50,7 +50,7 @@ self.addEventListener('fetch', event => {
             return cachedResponse;
         } catch(err) {
             console.log(err);
-            return fetch(event.request).catch(function(e) {console.log(e)});
+            return fetch(event.request);
         }
     })());
 });
