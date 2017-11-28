@@ -25,6 +25,7 @@ self.addEventListener('install', event => {
         Games.forEach(function(item,index) {
             if(item.Iframe) {
                 REQUIRED_FILES.push(item.Link);
+                REQUIRED_FILES.push(item.Icon);
             }
             else {
                 REQUIRED_FILES.push(item.Icon);
@@ -44,7 +45,7 @@ self.addEventListener('activate',event => {
 self.addEventListener('fetch', event => {
     if (event.request.method != 'GET') return;
     event.respondWith((async function() {
-        const response = await caches.match(event.request,{ignoreSearch:true});
+        var response = await caches.match(event.request,{ignoreSearch:true});
         if(response) {
             console.log(response);
             return response;
