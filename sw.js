@@ -44,13 +44,10 @@ self.addEventListener('activate',event => {
 self.addEventListener('fetch', event => {
     if (event.request.method != 'GET') return;
     event.respondWith((async function() {
-        try {
-            console.log(event.request);
             const cachedResponse = await caches.match(event.request,{ignoreSearch:true});
-            return cachedResponse;
-        } catch(err) {
-            console.log(err);
+            if(cachedResponse) {
+               return cachedResponse;
+            }
             return fetch(event.request);
-        }
     })());
 });
