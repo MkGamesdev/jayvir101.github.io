@@ -42,7 +42,7 @@ self.addEventListener('install', event => {
 
 self.addEventListener('fetch', event => {
     event.respondWith((async function() {
-        var response = await caches.match(event.request,{ignoreSearch:true});
+        var response = await caches.match(event.request);
         if(response) {
             return response;
         }
