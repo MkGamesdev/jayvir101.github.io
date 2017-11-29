@@ -18,6 +18,8 @@ var REQUIRED_FILES = [
     "https://jayvir101.github.io/lightning/Games/index.html",
     "https://jayvir101.github.io/lightning-resources/wallpaper.png",
     "https://jayvir101.github.io/lightning-resources/offline.html",
+    "https://jayvir101.github.io/index.html",
+    "https://jayvir101.github.io"
 ];
 
 self.addEventListener('install', event => {
