@@ -36,12 +36,8 @@ self.addEventListener('install', event => {
         caches.open(CACHE_NAME)
         .then(function(cache) {
             return cache.addAll(REQUIRED_FILES);
-        }).then(() => self.skipWaiting())
+        })
     })());
-});
-
-self.addEventListener('activate',event => {
-    event.waitUntil(self.clients.claim());
 });
 
 self.addEventListener('fetch', event => {
