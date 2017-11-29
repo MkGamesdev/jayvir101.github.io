@@ -18,8 +18,6 @@ var REQUIRED_FILES = [
     "https://jayvir101.github.io/lightning/Games/index.html",
     "https://jayvir101.github.io/lightning-resources/wallpaper.png",
     "https://jayvir101.github.io/lightning-resources/offline.html",
-    "https://jayvir101.github.io/index.html",
-    "https://jayvir101.github.io"
 ];
 
 self.addEventListener('install', event => {
@@ -36,12 +34,26 @@ self.addEventListener('install', event => {
         caches.open(CACHE_NAME)
         .then(function(cache) {
             return cache.addAll(REQUIRED_FILES);
-        })
+        }).then(() => self.skipWaiting())
     })());
 });
 
+self.addEventListener('activate',event => {
+    event.waitUntil(self.clients.claim());
+});
+
 self.addEventListener('fetch', event => {
-    event.respondWith(caches.match(event.request,{ignoreSearch:true}).then(function(response) {
-        return response;
-    })
-        )});
+    if (event.request.method != 'GET') return;
+    event.respondWith((async function() {
+        var response = await caches.match(event.request,{ignoreSearch:true});
+        if(response) {
+            return response;
+        }
+        else if(navigator.onLine) {
+            return await fetch(event.request);
+        }
+        else {
+            return await fetch("https://jayvir101.github.io/lightning-resources/offline.html");
+        }
+    })());
+});
