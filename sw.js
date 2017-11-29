@@ -1,5 +1,5 @@
 importScripts("https://jayvir101.github.io/lightning/Games.js");
-var CACHE_NAME = 'cache-v1';
+var CACHE_NAME = 'cache-v2';
 
 var REQUIRED_FILES = [
     "https://jayvir101.github.io/lightning/",
