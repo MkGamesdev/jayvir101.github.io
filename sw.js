@@ -43,9 +43,8 @@ self.addEventListener('activate',event => {
 });
 
 self.addEventListener('fetch', function(event) {
-    console.log(event.request.url);
     event.respondWith(caches.match(event.request,{ignoreSearch:true}).then(function(response) {
-            return response || fetch(event.request) || fetch("https://jayvir101.github.io/lightning-resources/offline.html");
+            return response || caches.match("https://jayvir101.github.io/lightning-resources/offline.html");
     }));
 });
                       
