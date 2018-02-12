@@ -31,8 +31,7 @@ self.addEventListener('install', event => {
                 REQUIRED_FILES.push(item.Icon);
             }
         }),
-        caches.open(CACHE_NAME)
-        .then(function(cache) {
+        caches.open(CACHE_NAME).then(function(cache) {
             return cache.addAll(REQUIRED_FILES);
         }).then(() => self.skipWaiting())
     })());
