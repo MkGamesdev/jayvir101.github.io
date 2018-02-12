@@ -2,6 +2,7 @@ importScripts("https://jayvir101.github.io/lightning/Games.js");
 var CACHE_NAME = 'cache-v2';
 
 var REQUIRED_FILES = [
+    "https://jayvir101.github.io/lightning-resources/offline.html",
     "https://jayvir101.github.io/lightning/",
     "https://jayvir101.github.io/lightning/index.html",
     "https://jayvir101.github.io/lightning/web_light.js",
@@ -17,7 +18,6 @@ var REQUIRED_FILES = [
     "https://jayvir101.github.io/lightning/Games/",
     "https://jayvir101.github.io/lightning/Games/index.html",
     "https://jayvir101.github.io/lightning-resources/wallpaper.png",
-    "https://jayvir101.github.io/lightning-resources/offline.html",
 ];
 
 self.addEventListener('install', event => {
@@ -44,7 +44,9 @@ self.addEventListener('activate',event => {
 self.addEventListener('fetch', function(event) {
     console.log("");
     event.respondWith(caches.match(event.request,{ignoreSearch:true}).then(function(response) {
-            return response || fetch(event.request) || caches.match("https://jayvir101.github.io/lightning-resources/offline.html");
+            return response || fetch(event.request).catch(function() {
+                return caches.match("https://jayvir101.github.io/lightning-resources/offline.html");
+            });
     }));
 });
                       
