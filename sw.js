@@ -46,7 +46,7 @@ self.addEventListener('fetch', event => {
     if (event.request.method != 'GET') return;
     event.respondWith((async function() {
                 console.log(event.request);
-        else if(!navigator.onLine) {
+        if(!navigator.onLine) {
             return await caches.match(event.request,{ignoreSearch:true});
         }
         else if(navigator.onLine) {
