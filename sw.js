@@ -42,9 +42,15 @@ self.addEventListener('activate',event => {
     event.waitUntil(self.clients.claim());
 });
 
-self.addEventListener('fetch', event => {
-    if (event.request.method != 'GET') return;
-    event.respondWith((async function() {
+self.addEventListener('fetch', function(event) {
+    console.log(event.request.url);
+    event.respondWith(caches.match(event.request,{ignoreSearch:true}).then(function(response) {
+            return response || fetch(event.request) || fetch("https://jayvir101.github.io/lightning-resources/offline.html");
+    }));
+});
+                      
+/*
+(async function() {
                 console.log(event.request);
         if(!navigator.onLine) {
             return await caches.match(event.request,{ignoreSearch:true});
@@ -55,5 +61,6 @@ self.addEventListener('fetch', event => {
         else {
             return await fetch("https://jayvir101.github.io/lightning-resources/offline.html");
         }
-    })());
-});
+    })()
+    
+*/
