@@ -17,6 +17,7 @@ var REQUIRED_FILES = [
     "https://jayvir101.github.io/lightning/Games/index.js",
     "https://jayvir101.github.io/lightning/Games/",
     "https://jayvir101.github.io/lightning/Games/index.html",
+    "https://jayvir101.github.io/lightning-resources/landscape.png",
     "https://jayvir101.github.io/lightning-resources/wallpaper.png",
 ];
 
