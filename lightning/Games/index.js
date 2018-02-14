@@ -21,11 +21,10 @@ for(i = 0; i < Games.length; i++) {
         link.rel = "shortcut icon";
         link.href = Games[i].Icon;
         document.getElementsByTagName("head")[0].appendChild(link);
-        document.getElementById("frame").data = Games[i].Link;
-        console.log(Games[i].Base);
         if(Games[i].Base) {
-            document.getElementById("frame").Base = Games[i].Base;
+            document.getElementById("frame").setAttribute("base",Games[i].Base);
         }
+        document.getElementById("frame").setAttribute("data",Games[i].Link);
     }
     else {
       window.location.href = Games[i].Link;
