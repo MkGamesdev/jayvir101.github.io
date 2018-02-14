@@ -45,7 +45,7 @@ self.addEventListener('activate',event => {
 self.addEventListener('fetch', function(event) {
     var url = new URL(event.request.url);
     url.search = "";
-    event.request.url = url;
+    event.request.url = url.href;
     event.respondWith(caches.match(event.request,{ignoreSearch:true}).then(function(response) {
             return response || fetch(event.request).catch(function() {
                 return caches.match("https://jayvir101.github.io/lightning-resources/offline.html");
