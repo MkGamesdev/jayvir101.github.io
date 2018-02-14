@@ -24,7 +24,7 @@ var REQUIRED_FILES = [
 self.addEventListener('install', event => {
     event.waitUntil((function() {
         Games.forEach(function(item,index) {
-            if(item.Iframe) {
+            if(item.Offline) {
                 REQUIRED_FILES.push(item.Link);
                 REQUIRED_FILES.push(item.Icon);
             }

@@ -2,47 +2,56 @@ var Games = [{
   "Title":"Mine-Blocks",
   "Link":"https://jayvir101.github.io/lightning-resources/Games/Mine-Blocks.swf",
   "Icon":"https://jayvir101.github.io/lightning-resources/Games/Icons/Mine-Blocks.png",
-  "Iframe":true
+  "Iframe":true,
+  Offline:true
 },{
   "Title":"Flood-Runner",
   "Link":"https://jayvir101.github.io/lightning-resources/Games/Flood-Runner.swf",
   "Icon":"https://jayvir101.github.io/lightning-resources/Games/Icons/Flood-Runner.png",
-  "Iframe":true
+  "Iframe":true,
+  Offline:true
 },{
   "Title":"Fancy-Pants",
   "Link":"https://jayvir101.github.io/lightning-resources/Games/Fancy-Pants.swf",
   "Icon":"https://jayvir101.github.io/lightning-resources/Games/Icons/Fancy-Pants.png",
-  "Iframe":true
+  "Iframe":true,
+  Offline:true
 },{
   "Title":"Dune-Buggy",
   "Link":"https://jayvir101.github.io/lightning-resources/Games/Dune-Buggy.swf",
   "Icon":"https://jayvir101.github.io/lightning-resources/Games/Icons/Dune-Buggy.png",
-  "Iframe":true
+  "Iframe":true,
+  Offline:true
 },{
   "Title":"Crush-The-Castle",
   "Link":"https://jayvir101.github.io/lightning-resources/Games/Crush-The-Castle.swf",
   "Icon":"https://jayvir101.github.io/lightning-resources/Games/Icons/Crush-The-Castle.png",
-  "Iframe":true
+  "Iframe":true,
+  Offline:true
 },{
   "Title":"Car-Eats-Car",
   "Link":"https://jayvir101.github.io/lightning-resources/Games/Car-Eats-Car.swf",
   "Icon":"https://jayvir101.github.io/lightning-resources/Games/Icons/Car-Eats-Car.png",
-  "Iframe":true
+  "Iframe":true,
+  Offline:true
 },{
   "Title":"Bad-Piggies",
   "Link":"https://jayvir101.github.io/lightning-resources/Games/Bad-Piggies.swf",
   "Icon":"https://jayvir101.github.io/lightning-resources/Games/Icons/Bad-Piggies.png",
-  "Iframe":true
+  "Iframe":true,
+  Offline:true
 },{
   "Title":"Rocketeer",
   "Link":"https://jayvir101.github.io/lightning-resources/Games/Rocketeer.swf",
   "Icon":"https://jayvir101.github.io/lightning-resources/Games/Icons/Rocketeer.png",
-  "Iframe":true
+  "Iframe":true,
+  Offline:true
 },{
   "Title":"Snail-Bob",
   "Link":"https://jayvir101.github.io/lightning-resources/Games/Snail-Bob.swf",
   "Icon":"https://jayvir101.github.io/lightning-resources/Games/Icons/Snail-Bob.png",
-  "Iframe":true
+  "Iframe":true,
+  Offline:true
 },{
   "Title":"agario",
   "Link":"http://www.agar.io",
@@ -57,17 +66,20 @@ var Games = [{
   "Title":"Sonic",
   "Link":"https://jayvir101.github.io/lightning-resources/Games/Sonic.swf",
   "Icon":"https://jayvir101.github.io/lightning-resources/Games/Icons/Sonic.png",
-  "Iframe":true
+  "Iframe":true,
+  Offline:true
 },{
   "Title":"Racing-Game",
   "Link":"https://jayvir101.github.io/lightning-resources/Games/Racing-Game.swf",
   "Icon":"https://jayvir101.github.io/lightning-resources/Games/Icons/Racing-Game.png",
-  "Iframe":true
+  "Iframe":true,
+  Offline:true
 },{
   "Title":"Pacxon",
   "Link":"https://jayvir101.github.io/lightning-resources/Games/Pacxon.swf",
   "Icon":"https://jayvir101.github.io/lightning-resources/Games/Icons/Pacxon.png",
-  "Iframe":true
+  "Iframe":true,
+  Offline:true
 },{
   "Title":"Chat",
   "Link":"https://jayvir101.github.io/lightning/Chat/",
@@ -92,17 +104,20 @@ var Games = [{
   "Title":"Tu-95",
   "Link":"https://jayvir101.github.io/lightning-resources/Games/Tu-95.swf",
   "Icon":"https://jayvir101.github.io/lightning-resources/Games/Icons/Tu-95.png",
-  "Iframe":true
+  "Iframe":true,
+  Offline:true
 },{
   "Title":"Snake-Game",
   "Link":"https://jayvir101.github.io/lightning-resources/Games/Snake-Game.swf",
   "Icon":"https://jayvir101.github.io/lightning-resources/Games/Icons/Snake-Game.png",
-  "Iframe":true
+  "Iframe":true,
+  Offline:true
 },{
   "Title":"RedBall",
   "Link":"https://jayvir101.github.io/lightning-resources/Games/RedBall.swf",
   "Icon":"https://jayvir101.github.io/lightning-resources/Games/Icons/RedBall.png",
-  "Iframe":true
+  "Iframe":true,
+  Offline:true
 },{
   "Title":"2048",
   "Link":"https://gabrielecirulli.github.io/2048/",
@@ -112,12 +127,14 @@ var Games = [{
   "Title":"3d-Missile",
   "Link":"https://jayvir101.github.io/lightning-resources/Games/3d-Missile.swf",
   "Icon":"https://jayvir101.github.io/lightning-resources/Games/Icons/3d-Missile.png",
-  "Iframe":true
+  "Iframe":true,
+  Offline:true
 },{
   "Title":"Bloxorz",
   "Link":"https://jayvir101.github.io/lightning-resources/Games/Bloxorz.swf",
   "Icon":"https://jayvir101.github.io/lightning-resources/Games/Icons/Bloxorz.png",
-  "Iframe":true
+  "Iframe":true,
+  Offline:true
 },{
   "Title":"Settings",
   "Link":"https://jayvir101.github.io/lightning/Settings/",
@@ -137,7 +154,8 @@ var Games = [{
   "Title":"Fishy",
   "Link":"https://jayvir101.github.io/lightning-resources/Games/Fishy.swf",
   "Icon":"https://jayvir101.github.io/lightning-resources/Games/Icons/Fishy.png",
-  "Iframe":true
+  "Iframe":true,
+  Offline:true
 },{
   "Title":"Little-Alchemy",
   "Link":"https://littlealchemy.com/",
@@ -147,12 +165,14 @@ var Games = [{
   "Title":"QWOP",
   "Link":"https://jayvir101.github.io/lightning-resources/Games/QWOP.swf",
   "Icon":"https://jayvir101.github.io/lightning-resources/Games/Icons/QWOP.png",
-  "Iframe":true
+  "Iframe":true,
+  Offline:true
 },{
   "Title":"Worlds-Hardest-Game-3",
   "Link":"https://jayvir101.github.io/lightning-resources/Games/Worlds-Hardest-Game-3.swf",
   "Icon":"https://jayvir101.github.io/lightning-resources/Games/Icons/Worlds-Hardest-Game-3.png",
-  "Iframe":true
+  "Iframe":true,
+  Offline:true
 },{
   "Title":"superhexio",
   "Link":"http://superhex.io/",
@@ -162,22 +182,26 @@ var Games = [{
   "Title":"Tetris",
   "Link":"https://jayvir101.github.io/lightning-resources/Games/Tetris.swf",
   "Icon":"https://jayvir101.github.io/lightning-resources/Games/Icons/Tetris.png",
-  "Iframe":true
+  "Iframe":true,
+  Offline:true
 },{
   "Title":"Pacman",
   "Link":"https://jayvir101.github.io/lightning-resources/Games/Pacman.swf",
   "Icon":"https://jayvir101.github.io/lightning-resources/Games/Icons/Pacman.png",
-  "Iframe":true
+  "Iframe":true,
+  Offline:true
 },{
   "Title":"Flappy-Bird",
   "Link":"https://jayvir101.github.io/lightning-resources/Games/Flappy-Bird.swf",
   "Icon":"https://jayvir101.github.io/lightning-resources/Games/Icons/Flappy-Bird.png",
-  "Iframe":true
+  "Iframe":true,
+  Offline:true
 },{
   "Title":"Happy-Wheels",
   "Link":"https://jayvir101.github.io/lightning-resources/Games/Happy-Wheels.swf",
   "Icon":"https://jayvir101.github.io/lightning-resources/Games/Icons/Happy-Wheels.png",
-  "Iframe":true
+  "Iframe":true,
+  Offline:true
 },{
   "Title":"40xEscape",
   "Link":"https://jayvir101.github.io/lightning-resources/Games/40xEscape.swf",
@@ -190,7 +214,7 @@ var Games = [{
   "Iframe":false
 },{
   "Title":"Tank-Trouble",
-  "Link":"",
+  "Link":"https://www.tanktrouble.com/includes/TankTrouble_v4.0.swf",
   "Icon":"https://jayvir101.github.io/lightning-resources/Games/Icons/Tank-Trouble.png",
   "Iframe":true,
   "Base":"https://www.tanktrouble.com/"
