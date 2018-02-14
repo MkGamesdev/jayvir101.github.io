@@ -1,0 +1,19 @@
+<script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCbd9Q8Yy1fNmBi2jXDJCc0Ml6NNeB6z3o",
+    authDomain: "lightning-3a5ef.firebaseapp.com",
+    databaseURL: "https://lightning-3a5ef.firebaseio.com",
+    projectId: "lightning-3a5ef",
+    storageBucket: "lightning-3a5ef.appspot.com",
+    messagingSenderId: "1035502144179"
+  };
+  firebase.initializeApp(config);
+</script>
+<script src="login.js" defer></script>
+<fieldset style="display:inline-block">
+  <input type="email" id="email" placeholder="Email"><br>
+  <input type="password" id="password" placeholder="Password"><br>
+  <input type="button" value="Login" onclick="login()">
+</fieldset>

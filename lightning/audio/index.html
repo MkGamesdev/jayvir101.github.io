@@ -1,0 +1,39 @@
+<script>
+var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+
+// create Oscillator node
+var oscillator = audioCtx.createOscillator();
+
+oscillator.frequency.value = 0; // value in hertz
+oscillator.connect(audioCtx.destination);
+oscillator.start();
+    
+    window.onload = function() {
+        document.onkeydown = function(e) {
+            if(e.keyCode == "13") {
+                oscillator.frequency.value = document.getElementById("input").value;
+                document.getElementById("input1").value = document.getElementById("input").value;
+               }
+        }
+        document.getElementById("input1").oninput = function(e) {
+            oscillator.frequency.value = document.getElementById("input1").value;
+            document.getElementById("input").value = document.getElementById("input1").value;
+        }
+        document.getElementById("type").onchange = function(e) {
+            oscillator.type = document.getElementById('type').value;
+        }
+        var url = new URL(location.href);
+        if(url.searchParams.get("frequency")) {
+            oscillator.frequency.value = parseInt(url.searchParams.get("frequency"));
+        }
+    }
+</script>
+<input id="input" type="number" max="24000" min="-24000" value="0">
+<input id="input1" type="range" max="24000" min="-24000" value="0">
+<br>
+<select id="type">
+  <option value="sine" defalt>sine</option>
+  <option value="square">square</option>
+  <option value="sawtooth">sawtooth</option>
+  <option value="triangle">triangle</option>
+</select>

@@ -1,0 +1,12 @@
+<title>Video Player</title>
+<script src="index.js" defer></script>
+<style>video::-webkit-media-controls {display:webkit flex;}</style>
+<style>
+    body {
+        margin:0;
+    }
+</style>
+<video controls preload="auto" id="video" poster="video.png"></video>
+<br>
+<input id="videosrc" placeholder="src" size="150">
+<div id="videotime"></div>

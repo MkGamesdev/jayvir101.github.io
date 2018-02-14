@@ -1,0 +1,97 @@
+body {
+    background-image: url("https://jayvir101.github.io/lightning-resources/wallpaper.png");
+    text-align:center;
+    margin:0;
+}
+
+#Search {
+    width:100%;
+    text-align:center;
+    border-radius:100px;
+    border:1px black;
+    outline: none;
+}
+
+#Games {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+div {
+ display:inline-block;
+}
+
+#glitch {
+  background:transparent;
+  width:20px;
+  height:20px;
+  position:absolute;
+  z-index:10;
+  top:0;
+  right:0;
+}
+
+#Icon_Holder {
+  background:blue;
+  width:100px;
+  height:140px;
+  margin:5px;
+  border:1px solid black;
+}
+
+#Icon_Img {
+  margin:5px;
+  width:80px;
+  height:80px;
+  cursor:pointer;
+  border:1px solid black;
+  border-radius:20px;
+}
+
+#Icon_Title {
+  overflow:hidden;
+  width:80px;
+  height:40px;
+  color:white;
+  word-wrap:break-word;
+}
+
+/* scrollbar style */
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background: #ffffff;
+  border: 2px solid #ffffff;
+  border-radius: 100px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #000000;
+}
+::-webkit-scrollbar-thumb:active {
+  background: #ffffff;
+}
+::-webkit-scrollbar-track {
+  background: #000000;
+  border: 2px solid #000000;
+  border-radius: 0px;
+}
+::-webkit-scrollbar-track:hover {
+  background: #ffffff;
+}
+::-webkit-scrollbar-track:active {
+  background: #000000;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}

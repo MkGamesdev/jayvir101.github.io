@@ -1,0 +1,25 @@
+<script src="../firebase.js"></script>
+<script src="../server.js"></script>
+<script src="../web_light.js"></script>
+<script src="../commands.js" defer></script>
+<script src="index.js" defer></script>
+<style>
+  #command_form {
+    padding:10px;
+    border:1px solid black;
+    background:#d3d3d3;
+    display:inline-block;
+  }
+</style>
+
+<center>
+  <div id="command_form">
+  <div id="command_presence"></div>
+    <input id="command_id" placeholder="00000" size="10">
+    <br>
+    <select id="command"></select>
+    <div id="command_options"></div>
+    <input type="button" value="Submit" id="command_button">
+  </div>
+  <div id="command_console"></div>
+</center>
