@@ -193,5 +193,5 @@ var Games = [{
   "Link":"https://www.tanktrouble.com/includes/TankTrouble_v4.0.swf",
   "Icon":"https://jayvir101.github.io/lightning-resources/Games/Icons/Tank-Trouble.png",
   "Iframe":true,
-  "Base":"https://www.tanktrouble.com/",
+  "Base":"https://www.tanktrouble.com/"
 }];
