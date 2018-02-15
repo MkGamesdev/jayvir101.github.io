@@ -206,7 +206,8 @@ var Games = [{
   "Title":"40xEscape",
   "Link":"https://jayvir101.github.io/lightning-resources/Games/40xEscape.swf",
   "Icon":"https://jayvir101.github.io/lightning-resources/Games/Icons/40xEscape.png",
-  "Iframe":true
+  "Iframe":true,
+  Offline:true
 },{
   "Title":"Sinuous",
   "Link":"http://www.sinuousgame.com/",

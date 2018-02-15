@@ -10,20 +10,11 @@ Games.sort(function(a,b) {
 });
 
 var Columns = 8;
-var Online = navigator.onLine;
 Games.forEach(function(item,index) {
   var Icon_Holder = document.createElement("div");
   var Icon_Img = document.createElement("img");
   var Icon_Title = document.createElement("div");
-  if(item.Offline) {
-    Games_Add_Click(Icon_Img,item.Title);
-  }
-  if(Online && !item.Offline) {
-    Games_Add_Click(Icon_Img,item.Title);
-  }
-  if(!Online && !item.Offline) {
-     Icon_Img.style.filter = "grayscale(100%)";
-  }
+  Games_Add_Click(Icon_Img,item.Title);
   Icon_Holder.id = "Icon_Holder";
   Icon_Holder.setAttribute("data-Game-Title",item.Title);
   Icon_Img.id = "Icon_Img";
