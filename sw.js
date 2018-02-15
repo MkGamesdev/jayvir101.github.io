@@ -47,12 +47,7 @@ self.addEventListener('fetch', function(event) {
     url.search = "";
     event.request.url = url.href;
     event.respondWith(fetch(event.request).catch(function() {
-        var url = new URL(event.request.url);
-        url.search = "";
-        event.request.url = url.href;
-        if(!REQUIRED_FILES.includes(event.request.url)) {
-            return caches.match("https://jayvir101.github.io/lightning-resources/offline.html");
-        }
+        event.request.url = event.request.url.toString().split("?")[0];
         return caches.match(event.request,{ignoreSearch:true}).then(function(response) {
             return response || caches.match("https://jayvir101.github.io/lightning-resources/offline.html");
         });
