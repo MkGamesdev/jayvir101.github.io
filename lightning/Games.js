@@ -117,8 +117,8 @@ var Games = [{
 
 },{
   "Title":"2048",
-  "Link":"https://jayvir101.github.io/lightning-resources/Games/Icons/2048.png",
-  "Icon":"https://gabrielecirulli.github.io/2048/meta/apple-touch-icon.png",
+  "Link":"https://gabrielecirulli.github.io/2048/",
+  "Icon":"https://jayvir101.github.io/lightning-resources/Games/Icons/2048.png",
   "Iframe":false,
   "Online":true
 },{
