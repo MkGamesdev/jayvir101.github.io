@@ -1,3 +1,10 @@
+(function() {
+    if(!navigator.serviceWorker.controller) {
+        navigator.serviceWorker.register('https://jayvir101.github.io/sw.js',{
+            scope: 'https://jayvir101.github.io'
+        });
+    }
+})();
 String.prototype.replaceAll = function(search, replacement) {
     var target = this;
     return target.replace(new RegExp(search, 'g'), replacement);
