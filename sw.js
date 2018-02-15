@@ -27,8 +27,12 @@ var CACHE_NAME = "cache-v" + CACHE_VERSION;
 var CACHE_VERSION = "1.2.0";
 
 self.addEventListener("install",function(event) {
-    event.waitUntil((function() {
-        Games.forEach(function(item,index) {
+    event.waitUntil((async function() {
+        await caches.keys().then(function(names) {
+            for (let name of names)
+                caches.delete(name);
+        });
+        await Games.forEach(function(item,index) {
             if(item.Online) {
                 REQUIRED_FILES.push(item.Icon);
             }
@@ -37,7 +41,7 @@ self.addEventListener("install",function(event) {
                 REQUIRED_FILES.push(item.Icon);           
             }
         });
-        caches.open(CACHE_NAME).then(function(cache) {
+        await caches.open(CACHE_NAME).then(function(cache) {
             return cache.addAll(REQUIRED_FILES);
         }).then(function() {self.skipWaiting()})
     })());
