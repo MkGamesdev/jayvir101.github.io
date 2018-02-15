@@ -1,7 +1,6 @@
 var DefaltSettings = ["#ff0000","#ffffff","#0000ff","https://jayvir101.github.io/lightning-resources/wallpaper.png"];
 
 function SetPageStyle(input) {
-    console.log(input);
     if(isSettingsPage) {
         var inputs = document.getElementsByTagName("input");
         inputs[0].value = input[0];

@@ -1,10 +1,3 @@
-var Command_Id = document.getElementById("command_id");
-var Command = document.getElementById("command");
-var Command_Button = document.getElementById("command_button");
-var Command_Options = document.getElementById("command_options");
-var Command_Console = document.getElementById("command_console");
-var Command_Presence = document.getElementById("command_presence");
-
 Server.prototype.s = function(to,c,val) {
     if(commands[c]) server.send(to,commands[c].build(val));
 }

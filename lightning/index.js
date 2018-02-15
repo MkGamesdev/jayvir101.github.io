@@ -41,15 +41,17 @@ function Games_Add_Click(element,link) {
   });
 }
 
-var Icon_Holder = document.querySelectorAll("#Icon_Holder");
-var Search = document.getElementById("Search");
-Search.onkeyup = function() {
-    var filter = Search.value.toUpperCase();
-    Icon_Holder.forEach(function(item) {
-        if(item.getAttribute("data-Game-Title").toUpperCase().replaceAll("-"," ").indexOf(filter) > -1) {
-            item.style.display = "";
-        } else {
-            item.style.display = "none";
-        }
-    });
-};
+(function() {
+    var Icon_Holder = document.querySelectorAll("#Icon_Holder");
+    var Search = document.getElementById("Search");
+    Search.onkeyup = function() {
+        var filter = Search.value.toUpperCase();
+        Icon_Holder.forEach(function(item) {
+            if(item.getAttribute("data-Game-Title").toUpperCase().replaceAll("-"," ").indexOf(filter) > -1) {
+                item.style.display = "";
+            } else {
+                item.style.display = "none";
+            }
+        });
+    };
+})();
