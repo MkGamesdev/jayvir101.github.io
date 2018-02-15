@@ -1,8 +1,10 @@
 (function() {
-    if(!navigator.serviceWorker.controller) {
-        navigator.serviceWorker.register('https://jayvir101.github.io/sw.js',{
-            scope: 'https://jayvir101.github.io'
-        });
+    if ('serviceWorker' in navigator) {
+        if(!navigator.serviceWorker.controller) {
+            navigator.serviceWorker.register('https://jayvir101.github.io/sw.js',{
+                scope: 'https://jayvir101.github.io'
+            });
+        }
     }
 })();
 String.prototype.replaceAll = function(search, replacement) {
