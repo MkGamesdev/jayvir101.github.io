@@ -31,7 +31,7 @@ self.addEventListener('install', event => {
             else {
                 REQUIRED_FILES.push(item.Icon);
             }
-        }),
+        });
         caches.open(CACHE_NAME).then(function(cache) {
             return cache.addAll(REQUIRED_FILES);
         }).then(() => self.skipWaiting())
@@ -50,6 +50,9 @@ self.addEventListener('fetch', function(event) {
         var url = new URL(event.request.url);
         url.search = "";
         event.request.url = url.href;
+        if(REQUIRED_FILES.includes(event.request.url)) {
+            return caches.match("https://jayvir101.github.io/lightning-resources/offline.html");
+        }
         return caches.match(event.request,{ignoreSearch:true}).then(function(response) {
             return response || caches.match("https://jayvir101.github.io/lightning-resources/offline.html");
         });
