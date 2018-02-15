@@ -94,7 +94,8 @@ var Games = [{
   "Title":"Goodgame-Empire",
   "Link":"https://media.goodgamestudios.com/games/empire/",
   "Icon":"https://jayvir101.github.io/lightning-resources/Games/Icons/Goodgame-Empire.png",
-  "Iframe":false
+  "Iframe":false,
+  "Online":true
 },{
   "Title":"Tu-95",
   "Link":"https://jayvir101.github.io/lightning-resources/Games/Tu-95.swf",
