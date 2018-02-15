@@ -120,7 +120,7 @@ var Games = [{
   Offline:true
 },{
   "Title":"2048",
-  "Link":"https://gabrielecirulli.github.io/2048/",
+  "Link":"https://jayvir101.github.io/lightning-resources/Games/Icons/2048.png",
   "Icon":"https://gabrielecirulli.github.io/2048/meta/apple-touch-icon.png",
   "Iframe":false
 },{
