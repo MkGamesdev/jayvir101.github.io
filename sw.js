@@ -50,7 +50,7 @@ self.addEventListener('fetch', function(event) {
         var url = new URL(event.request.url);
         url.search = "";
         event.request.url = url.href;
-        if(REQUIRED_FILES.includes(event.request.url)) {
+        if(!REQUIRED_FILES.includes(event.request.url)) {
             return caches.match("https://jayvir101.github.io/lightning-resources/offline.html");
         }
         return caches.match(event.request,{ignoreSearch:true}).then(function(response) {
