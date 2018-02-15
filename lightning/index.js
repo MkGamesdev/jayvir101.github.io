@@ -15,13 +15,13 @@ Games.forEach(function(item,index) {
   var Icon_Holder = document.createElement("div");
   var Icon_Img = document.createElement("img");
   var Icon_Title = document.createElement("div");
-  if(!item.Offline) {
+  if(item.Offline) {
     Games_Add_Click(Icon_Img,item.Title);
   }
-  if(Online && item.Offline) {
+  if(Online && !item.Offline) {
     Games_Add_Click(Icon_Img,item.Title);
   }
-  if(!Online && item.Offline) {
+  if(!Online && !item.Offline) {
      Icon_Img.style.filter = "grayscale(100%)";
   }
   Icon_Holder.id = "Icon_Holder";
