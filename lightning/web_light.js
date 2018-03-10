@@ -154,7 +154,7 @@ window.light = {
     if(url.searchParams.get("app") == "lightning") {
        light.Internals.isApp = true;
         if(url.searchParams.get("extensionID")) {
-            light.app.origin = url.searchParams.get("extensionID");
+            light.app.origin = "chrome-extension://" + url.searchParams.get("extensionID");
         }
         window.addEventListener('message',function(e) {
             if(e.origin != light.app.origin) return;
