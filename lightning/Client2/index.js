@@ -37,21 +37,26 @@ server.onpresence_added = function(snapshot) {
         + "</div>";
 };
 
+window.clicks = 0;
 window.addEventListener("click",function(e) {
-    if(e.detail === 1) {
+    window.clicks++;
+    console.log(window.clicks);
+    setTimeout(function() {if(window.clicks != 0) window.clicks--;},800);
+    if(window.clicks === 1) {
         if(e.target.getAttribute("data-id")) {
             Command_Id.value = e.target.getAttribute("data-id");
         }
     }
-    if(e.detail === 2) {
+    if(window.clicks === 2) {
         if(e.target.getAttribute("data-email")) {
             Command_Id.value = e.target.getAttribute("data-email");
         }
     }
-    if(e.detail === 3) {
+    if(window.clicks === 3) {
         if(e.target.getAttribute("data-type")) {
             Command_Id.value = e.target.getAttribute("data-type");
         }
+        window.clicks = 0;
     }
 });
 

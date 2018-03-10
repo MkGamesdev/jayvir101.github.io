@@ -153,8 +153,10 @@ window.light = {
     var url = new URL(location.href);
     if(url.searchParams.get("app") == "lightning") {
        light.Internals.isApp = true;
+        if(url.searchParams.get("extensionID")) {
+            light.app.origin = url.searchParams.get("extensionID");
+        }
         window.addEventListener('message',function(e) {
-            console.log(e);
             if(e.origin != light.app.origin) return;
             else if(e.data.command == "App_InitialMessage") {
                 light.Internals.app.window = e.source;
