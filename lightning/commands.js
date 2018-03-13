@@ -214,7 +214,7 @@ var commands = {
             return {
                 url:a[0],
                 layout:a[1],
-                Command:"crash"
+                Command:"wallpaper"
             }
         }
     },

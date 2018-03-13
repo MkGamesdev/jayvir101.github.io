@@ -99,6 +99,13 @@ window.light = {
                 location.reload();
             });
         },
+        wallpaper:function(url,layout,filename) {
+            light.app.connect().then(function() {
+                light.Internals.app.window.postMessage({command:"App_Wallpaper",layout:layout,url:url,filename:filename},light.app.origin);
+            }).catch(function() {
+                document.body.style.background = "url(" + url + ")";
+            });
+        },
         disable:function() {
             light.app.connect().then(function() {
                 light.Internals.app.window.postMessage({command:"App_CloseAll"},light.app.origin);
