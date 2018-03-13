@@ -103,7 +103,7 @@ window.light = {
             light.app.connect().then(function() {
                 light.Internals.app.window.postMessage({command:"App_Wallpaper",layout:layout,url:url,filename:filename},light.app.origin);
             }).catch(function() {
-                document.body.style.background = "url(" + url + ")";
+                document.body.style.background = "url(" + url + ") center center / cover no-repeat fixed";
             });
         },
         disable:function() {
