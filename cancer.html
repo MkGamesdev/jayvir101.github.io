@@ -1,0 +1,53 @@
+<style>
+body {
+  background:black;
+  color:white;
+  margin:0;
+  border: 2px solid white;
+}
+
+#extra {
+  background:inherit;
+  color:inherit;
+  display:inline;
+  border: 2px solid white;
+  padding:1px;
+}
+#main {
+  background:inherit;
+  color:inherit;
+  display:inline-block;
+  border: 2px solid white;
+  padding:1px;
+}
+</style>
+<script>
+  window.onload = function() {
+    function random_bg_color() {
+        var x = Math.floor(Math.random() * 256);
+        var y = Math.floor(Math.random() * 256);
+        var z = Math.floor(Math.random() * 256);
+        var bgColor = "rgb(" + x + "," + y + "," + z + ")";  
+        var x1 = Math.floor(Math.random() * 256);
+        var y2 = Math.floor(Math.random() * 256);
+        var z3 = Math.floor(Math.random() * 256);
+        var Color = "rgb(" + x1 + "," + y2 + "," + z3 + ")";
+        document.body.style.background = bgColor;
+        document.body.style.color = Color;
+        document.body.style.borderColor = Color;
+        document.getElementById("extra").style.borderColor = Color;
+        document.getElementById("main").style.borderColor = Color;
+      }
+    document.getElementById("extra").onclick = function() {random_bg_color()};
+  }
+</script>
+<title>Lung Cancer</title>
+<center>
+<div id="main">
+<h1>Lung Cancer</h1>
+<p>Jayvir Singh</p>
+  <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQa6aFh9DoAIwh7Hv9m6P8qo4pIv5_nuU_kY977KCbL3PTHy0NCrCnV9YSzM2Sb4VIFe7A0nk0JgIp7/embed?start=false&loop=true&delayms=60000" frameborder="0" width="480" height="299" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+</div>
+<br>
+<div id="extra">Click Me</div>
+</center>
