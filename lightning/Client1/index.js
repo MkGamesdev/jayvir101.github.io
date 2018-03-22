@@ -11,7 +11,9 @@ window.ononline = function() {
 light.app.email().then(function(email) {
     server.email = email;
     server.onreceive = function(snapshot) {
-        if(commands[snapshot.val().Data.Command]) commands[snapshot.val().Data.Command].receive(snapshot);
+        if(commands[snapshot.val().Data.Command]) {
+            commands[snapshot.val().Data.Command].receive(snapshot);
+        }
     }
     server.onreceiveError = function(snapshot) {
         if(snapshot.val().Data.data != "<code style='color:red;'>ha you idiot upgrade</code>") {
