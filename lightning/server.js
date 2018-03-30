@@ -10,7 +10,7 @@
         messagingSenderId: "512217392825"
     });
     var database = firebase.database();
-    window.database = firebase.database();    
+    window.database = firebase.database();
     var Presence = database.ref("Presence");
     window.Server = function(options) {
         if(this === window) throw "Server: Please use new keyword.";
@@ -41,7 +41,8 @@
     };
     Server.login = function(email,password) {return firebase.auth().signInWithEmailAndPassword(email,password)};
     Server.logout = function() {return firebase.auth().signOut()};
-
+    Server.base = firebase;
+    Server.database = database;
     Server.prototype.send = function(to,data) {
         if(this === window) throw "Server: Please use new keyword.";
         if(!this.connected) throw "Server: Please connect to the server first.";

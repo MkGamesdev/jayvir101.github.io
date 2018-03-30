@@ -142,25 +142,6 @@ var commands = {
             };
         }
     },
-    unlock:{
-        submit:function() {
-            server.send(Command_Id.value,this.build());
-        },
-        receive:function(snapshot) {
-            if(snapshot.val().privilege) {
-               server.permission = false;
-            }
-        },
-        click:function() {
-            Command_Options.innerHTML = "";
-        },
-        build:function() {
-            return {
-                privilege:true,
-                Command:"unlock",
-            };
-        }
-    },
     speech:{
         submit:function() {
             server.send(Command_Id.value,this.build([document.getElementById("data").value]));
