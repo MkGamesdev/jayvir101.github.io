@@ -76,7 +76,7 @@
             div.innerHTML = "<b>" + datem + "</b>" + " <em style='color:blue;'>(Owner) Jayvir</em> : <div style='display:inline;'>" + snapshot.val().text + "</div><br>";
             messagesDiv.prepend(div);
         }
-        if(snapshot.val().name == "/jot") {
+        else if(snapshot.val().name == "/jot") {
             var div = document.createElement("div");
             div.innerHTML = "<b>" + datem + "</b>" + " <em style='color:blue;'>(Owner) Harjot</em> : <div style='display:inline;'>" + snapshot.val().text + "</div><br>";
             messagesDiv.prepend(div);
