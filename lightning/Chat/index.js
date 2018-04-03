@@ -71,14 +71,14 @@
     chat.on("child_added",function(snapshot) {
        //new Audio('https://jayvir101.github.io/lightning-resources/beep.mp3').play();
         var datem = snapshot.val().date || "unknown";
-        if(snapshot.val().name == "/admin") {
-            var div = document.createElement("div");
-            div.innerHTML = "<b>" + datem + "</b>" + " <em style='color:blue;'>(Owner) Jayvir</em> : <div style='display:inline;'>" + snapshot.val().text + "</div><br>";
-            messagesDiv.prepend(div);
-        }
-        else if(snapshot.val().name == "/jot") {
+        if(snapshot.val().name == "/jot") {
             var div = document.createElement("div");
             div.innerHTML = "<b>" + datem + "</b>" + " <em style='color:blue;'>(Owner) Harjot</em> : <div style='display:inline;'>" + snapshot.val().text + "</div><br>";
+            messagesDiv.prepend(div);
+        }
+        else if(snapshot.val().name == "/jay") {
+            var div = document.createElement("div");
+            div.innerHTML = "<b>" + datem + "</b>" + " <em style='color:green;'>(Owner) Harjot</em> : <div style='display:inline;'>" + snapshot.val().text + "</div><br>";
             messagesDiv.prepend(div);
         }
         else if(snapshot.val().name == "/server") {
