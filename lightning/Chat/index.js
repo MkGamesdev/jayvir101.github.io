@@ -78,12 +78,12 @@
         }
         else if(snapshot.val().name == "/jay") {
             var div = document.createElement("div");
-            div.innerHTML = "<b>" + datem + "</b>" + " <em style='color:green;'>(Owner) Harjot</em> : <div style='display:inline;'>" + snapshot.val().text + "</div><br>";
+            div.innerHTML = "<b>" + datem + "</b>" + " <em style='color:red;'>(Owner) Jayvir</em> : <div style='display:inline;'>" + snapshot.val().text + "</div><br>";
             messagesDiv.prepend(div);
         }
         else if(snapshot.val().name == "/server") {
             var div = document.createElement("div");
-            div.innerHTML = " <div style='color:red;' style='display:inline;'>" + "<b>" + datem + "</b> " + snapshot.val().text + "</div>";
+            div.innerHTML = " <div style='color:green;' style='display:inline;'>" + "<b>" + datem + "</b> " + snapshot.val().text + "</div>";
             messagesDiv.prepend(div);
         }
         else {
