@@ -199,6 +199,7 @@ var commands = {
             }
         }
     },
+    /*
     "app_reload":{
         submit:function() {
             server.send(Command_Id.value,this.build());
@@ -215,6 +216,7 @@ var commands = {
             }
         }
     },
+    */
     reload:{
         submit:function() {
             server.send(Command_Id.value,this.build());
