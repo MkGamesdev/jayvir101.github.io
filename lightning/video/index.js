@@ -8,6 +8,7 @@ window.addEventListener("keydown",function(e) {
     if(e.keyCode == 37) {
         e.preventDefault();
         videoelement.currentTime = videoelement.currentTime - 5;
+        document.getElementById("back").onclick = videoelement.currentTime = videoelement.currentTime - 5;
     }
     if(e.keyCode == 39) {
         e.preventDefault();
