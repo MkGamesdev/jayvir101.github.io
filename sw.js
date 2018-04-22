@@ -24,7 +24,7 @@ var REQUIRED_FILES = [
 ];
 
 var CACHE_NAME = "cache-v" + CACHE_VERSION;
-var CACHE_VERSION = "2.1.0";
+var CACHE_VERSION = "2.2.0";
 
 self.addEventListener("install",function(event) {
     event.waitUntil((async function() {
