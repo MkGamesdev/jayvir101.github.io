@@ -51,7 +51,7 @@ var Games = [{
   "Iframe":false,
   "Online":true
 },{
-  "Title":"agario",
+  "Title":"survivio",
   "Link":"http://surviv.io",
   "Icon":"https://jayvir101.github.io/lightning-resources/Games/Icons/survivio.png",
   "Iframe":false,
