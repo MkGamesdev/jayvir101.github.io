@@ -51,6 +51,12 @@ var Games = [{
   "Iframe":false,
   "Online":true
 },{
+  "Title":"agario",
+  "Link":"http://surviv.io",
+  "Icon":"https://jayvir101.github.io/lightning-resources/Games/Icons/survivio.png",
+  "Iframe":false,
+  "Online":true
+},{
   "Title":"wingsio",
   "Link":"http://www.wings.io",
   "Icon":"https://jayvir101.github.io/lightning-resources/Games/Icons/wingsio.png",
