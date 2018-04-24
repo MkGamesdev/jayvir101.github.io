@@ -1,0 +1,46 @@
+<script src="https://jayvir101.github.io/lightning/firebase.js"></script>
+<script src="https://jayvir101.github.io/lightning/server.js"></script>
+<script src="https://jayvir101.github.io/lightning/web_light.js"></script>
+<script src="https://jayvir101.github.io/lightning/commands.js"></script>
+<script src="index.js" defer></script>
+<style>
+    #command_form {
+        padding:10px;
+        border:1px solid black;
+        display:inline-block;
+    }
+    body {
+        background: black;
+    }
+    div {
+        background:red;
+    }
+    select {
+        background: black;
+        color: red;
+        outline: none;
+        border: none;
+    }
+    input,textarea,h1 {
+        background: black;
+        color: red;
+        outline: none;
+        border: none;
+        margin: 1px;
+    }
+    ::placeholder {
+        color:red;
+    }
+    ::-webkit-scrollbar { 
+        display: none; 
+    }
+</style>
+<center>
+    <div id="command_form">
+        <div id="command_presence"></div>
+        <input id="command_id" placeholder="00000" size="10">
+        <input id="command_data" placeholder="message..." maxlength="50">
+        <input type="button" value="Submit" id="command_button">
+    </div>
+        <div id="command_console"></div>
+</center>
