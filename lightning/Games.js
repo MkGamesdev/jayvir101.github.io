@@ -235,4 +235,10 @@ var Games = [{
   "Base":"https://www.tanktrouble.com/",
   "Iframe":true,
   "Online":true
+},,{
+  "Title":"Crossy Road",
+  "Link":"http://game-cdn.poki.com/v37/crossyroad/index.html",
+  "Icon":"https://jayvir101.github.io/lightning-resources/Games/Icons/Tank-Trouble.png",
+  "Iframe":true,
+  "Online":true
 }];
