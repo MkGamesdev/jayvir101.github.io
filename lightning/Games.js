@@ -236,9 +236,9 @@ var Games = [{
   "Iframe":true,
   "Online":true
 },,{
-  "Title":"Crossy Road",
+  "Title":"Crossy-Road",
   "Link":"http://game-cdn.poki.com/v37/crossyroad/index.html",
-  "Icon":"https://jayvir101.github.io/lightning-resources/Games/Icons/Tank-Trouble.png",
+  "Icon":"https://jayvir101.github.io/lightning-resources/Games/Icons/Crossy-Road.png",
   "Iframe":true,
   "Online":true
 }];
