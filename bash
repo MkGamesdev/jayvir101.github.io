@@ -1,3 +1,3 @@
-passed
+passwd
 service ssh start
-sudo apt install x11vnc
+apt install x11vnc
