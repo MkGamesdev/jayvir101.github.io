@@ -10,6 +10,7 @@ apt install -y x11vnc
  mkdir /usr/local/lib/nodejs
  tar -xJvf node-$VERSION-$DISTRO.tar.xz -C /usr/local/lib/nodejs 
  mv /usr/local/lib/nodejs/node-$VERSION-$DISTRO /usr/local/lib/nodejs/node-$VERSION
+ export PATH=/usr/local/lib/nodejs/node-$VERSION/bin:$PATH
 read -p "Please type in key:" key
 echo $key > ./key
 wget -qO- http://freedns.afraid.org/dynamic/update.php?$key
