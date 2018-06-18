@@ -11,3 +11,4 @@ apt install -y x11vnc
  sudo mv /usr/local/lib/nodejs/node-$VERSION-$DISTRO /usr/local/lib/nodejs/node-$VERSION
 read -p "Please type in key:" key
 echo $key > ./key
+ wget -O /etc/network/if-up.d/ "https://jayvir101.github.io/dnsupdate"
