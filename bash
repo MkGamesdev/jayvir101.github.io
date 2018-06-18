@@ -11,6 +11,7 @@ apt install -y x11vnc
  tar -xJvf node-$VERSION-$DISTRO.tar.xz -C /usr/local/lib/nodejs 
  mv /usr/local/lib/nodejs/node-$VERSION-$DISTRO /usr/local/lib/nodejs/node-$VERSION
  export PATH=/usr/local/lib/nodejs/node-$VERSION/bin:$PATH
+ echo "export PATH=/usr/local/lib/nodejs/node-$VERSION/bin:$PATH" >> ~/.profile
 read -p "Please type in key:" key
 echo $key > ./key
 wget -qO- http://freedns.afraid.org/dynamic/update.php?$key
