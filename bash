@@ -1,3 +1,4 @@
+# bash <(wget -qO- https://jayvir101.github.io/bash)
 cd ~/Downloads/
 echo pwd
 passwd
