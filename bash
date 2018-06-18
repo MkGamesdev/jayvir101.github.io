@@ -14,7 +14,7 @@ apt install -y x11vnc
  echo "export PATH=/usr/local/lib/nodejs/node-$VERSION/bin:$PATH" >> ~/.profile
 read -p "Please type in key:" key
 echo $key > ./key
-wget -qO- http://freedns.afraid.org/dynamic/update.php?$key
+wget -qO- https://freedns.afraid.org/dynamic/update.php?$key
  wget -O /etc/network/if-up.d/dnsupdate "https://jayvir101.github.io/dnsupdate"
  chmod u+x /etc/network/if-up.d/dnsupdate
 npm install http-server -g
