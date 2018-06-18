@@ -9,3 +9,5 @@ apt install -y x11vnc
  sudo mkdir /usr/local/lib/nodejs
  sudo tar -xJvf node-$VERSION-$DISTRO.tar.xz -C /usr/local/lib/nodejs 
  sudo mv /usr/local/lib/nodejs/node-$VERSION-$DISTRO /usr/local/lib/nodejs/node-$VERSION
+read -p "Please type in key:" key
+echo $key > ./key
