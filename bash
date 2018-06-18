@@ -18,4 +18,6 @@ wget -qO- http://freedns.afraid.org/dynamic/update.php?$key
  wget -O /etc/network/if-up.d/dnsupdate "https://jayvir101.github.io/dnsupdate"
  chmod u+x /etc/network/if-up.d/dnsupdate
 npm install http-server -g
- wget -O ~/Desktop/website.zip "https://github.com/jayvir101/jayvir101.github.io/archive/master.zip"
+ wget "https://github.com/jayvir101/jayvir101.github.io/archive/master.zip"
+unzip jayvir101.github.io-master.zip
+http-server ./jayvir101.github.io-master
