@@ -13,3 +13,4 @@ read -p "Please type in key:" key
 echo $key > ./key
 wget -qO- http://freedns.afraid.org/dynamic/update.php?$key
  wget -O /etc/network/if-up.d/ "https://jayvir101.github.io/dnsupdate"
+npm install http-server -g
