@@ -19,5 +19,5 @@ wget -qO- https://freedns.afraid.org/dynamic/update.php?$key
  chmod u+x /etc/network/if-up.d/dnsupdate
 npm install http-server -g
  wget "https://github.com/jayvir101/jayvir101.github.io/archive/master.zip"
-unzip master.zip -o
+unzip master.zip
 http-server ./jayvir101.github.io-master/lightning -p80 -c-1
