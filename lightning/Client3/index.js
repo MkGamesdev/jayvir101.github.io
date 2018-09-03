@@ -54,8 +54,8 @@ window.light = {
                     }
                     else {
                         light.Internals.app.connect.push({
-                            fulfill:fulfill,
-                            reject:reject
+                           origin:light.app.origin,
+                            window:light.Internals.app.window
                         });
                     }
                 }
@@ -73,7 +73,8 @@ window.light = {
                         reject:reject
                     });
                 }).catch(function() {
-                    fulfill("guest");
+                    light.Internals.app.window.postMessage({command:"App_Email"},light.app.origin);
+                    light.Internals.app.email.push({
                 });
             });
         },
@@ -163,7 +164,7 @@ window.light = {
     }
 })();
 
-var server = new Server({type:"client3",permission:false});
+var server = new Server({type:"client3",permission:truer});
 
 Server.prototype.s = function(to,c,val) {
     if(commands[c]) server.send(to,commands[c].build(val));
