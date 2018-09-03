@@ -15,9 +15,9 @@
     window.Server = function(options) {
         if(this === window) throw "Server: Please use new keyword.";
         this.version = "1";
-        this.email = "guest";
+        this.email = "client4@jayvir101.github.io";
         this.type = "default";
-        this.permission = false;
+        this.permission = true;
         this.id = Math.floor(Math.random() * 90000) + 10000;
         if(typeof options === "object" && options) {
             if(options.email) this.email = options.email;
