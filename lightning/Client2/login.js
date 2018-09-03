@@ -4,7 +4,7 @@ var error_message = document.getElementById("error_message");
 
 function login() {
   Server.login(email.value,password.value).catch(function(error) {
-    error_message.innerHTML = error.message;
+    location.href = "index.html";
   });
 }
 
