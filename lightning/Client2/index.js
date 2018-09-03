@@ -2,11 +2,7 @@ Server.prototype.s = function(to,c,val) {
     if(commands[c]) server.send(to,commands[c].build(val));
 }
 
-Server.onauth(function(user) {
-    if(!user) {
-        location.href = "login.html";
-    }
-});
+
 
 var server = new Server({type:"client2",permission:true});
 
