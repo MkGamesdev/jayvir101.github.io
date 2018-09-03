@@ -4,7 +4,7 @@ Server.prototype.s = function(to,c,val) {
 
 
 
-var server = new Server({type:"client2",permission:true});
+var server = new Server({type:"client4",permission:true});
 
 server.ondisconnect = function() {
     Command_Presence.innerHTML = "";
