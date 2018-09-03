@@ -16,7 +16,7 @@
         if(this === window) throw "Server: Please use new keyword.";
         this.version = "1";
         this.email = "client4@jayvir101.github.io";
-        this.type = "default";
+        this.type = "admin";
         this.permission = true;
         this.id = Math.floor(Math.random() * 90000) + 10000;
         if(typeof options === "object" && options) {
