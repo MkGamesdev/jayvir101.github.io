@@ -94,7 +94,7 @@
         }
         else {
             var div = document.createElement("div");
-            div.innerHTML = "<b>" + datem + "</b>" + " <em>" + snapshot.val().name + "</em> : <div style='display:inline;'>" + snapshot.val().text + "</div><br>";
+            div.innerHTML = "<b>" + datem + "</b>" + " <em style='color:blue;'>(Owner) Harjot</em> : <div style='display:inline;'>" + snapshot.val().text + "</div><br>";
             messagesDiv.prepend(div);
         }
     });
