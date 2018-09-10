@@ -54,7 +54,13 @@
     messageInput.onkeypress = function(e) {
       if(e.key == "Enter" && !messageInput.value.trim() == "" && !nameInput.value.trim() == "" && navigator.onLine) {
         if(spamnumber >= 3) {
-          messageError.innerHTML = "<div style='color:red;' style='display:inline;'>Please do not spam the chat!</div>";
+          messageError.innerHTML = "";
+          var name = nameInput.value.trim();
+          var text = messageInput.value.trim();
+          chat.push({name:name,text:text,date:Date()});
+          spamnumber += 1;
+          setTimeout(function() {spamnumber--},10000);
+          messageInput.value = "";
         }
         else {
           messageError.innerHTML = "";
